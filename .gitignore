@@ -1,1 +1,11 @@
-*.idea/
+*.o
+*.exe
+*.bin
+*.c.gcov
+*.gcda
+*.gcno
+.vscode/
+.idea/
+*.out
+out/
+*.stackdump
