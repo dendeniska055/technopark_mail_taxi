@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "Driver.proto";
+import "../Descriprion_Geo_Data/LocationData.proto";
+
+package GeoIndexApi;
+
+service GeoIndexService{
+    rpc GetDrivers(GetDriversRequest) returns GetDriversResponse{}
+    rpc PutOrder(PutOrderRequest) returns PutOrderResponse{}
+}
+
+message GetDriversRequest{
+    Coordinate coordinate = 1;
+    OrderStatus status = 2;
+    bool        children = 3;
+    bool        enimals = 4; 
+}
+
+
+message GetDriversResponse{
+    repeated Driver drivers = 1;
+}
+
+message PutOrder{
+    string clientToken = 1;
+    string driverToken = 2;
+    Coordinate coordinate = 3;
+}
+
+message PutOrderResponse{
+    bool status = 1;
+}
