@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package LocationData;
+
+message Coordinate{
+  double _lat = 1;
+  double _long = 2;
+}
+
+message LocationData{
+  string token = 1;
+  Coordinate coordinate = 2;
+  string time = 3;
+}
