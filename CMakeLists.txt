@@ -1,8 +1,24 @@
 cmake_minimum_required(VERSION 3.17)
-project(project)
+project(untitled1)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
-set(SRC project/main.cpp project/src/User_Authorization.cpp project/src/Handler.cpp project/src/Request.cpp project/src/User_Registration.cpp)
+set(BOOST_ROOT "/usr/local/Cellar/boost/1.74.0")
 
-add_executable(project ${SRC})
+#find_package(Boost 1.74.0 COMPONENTS system filesystem REQUIRED)
+
+find_package(Boost)
+
+if (NOT Boost_FOUND)
+    message(FATAL_ERROR "Could not find boost!")
+endif()
+
+include_directories(${Boost_INCLUDE_DIRS})
+
+set(auth "project/src/AuthorizationServer.cpp" "project/src/SHA1.cpp")
+set(data "project/database/DatabaseManager.cpp" )
+
+
+add_executable(mail_taxi project/main.cpp ${auth})
+
+target_link_libraries(mail_taxi ${Boost_LIBRARIES})
