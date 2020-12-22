@@ -5,42 +5,42 @@
 #include <string>
 #include <vector>
 #include <map>
-
+#include <memory>
+#include <random>
 
 #define MAX_TOKEN_LENGHT 12
 
+#include "pgbackend.h"
+#include "pgconnection.h"
 #include "SHA1.h"
 
-struct UserInfo {
+struct RegistrationRequest{
   std::string login;
   std::string password;
-  bool isDriver;
+  std::string email;
 };
 
-struct UserResponse {
-  std::string login;
-  bool isDriver;
-
-  explicit UserResponse(const std::string& _login = "", bool v = false) : login(_login), isDriver(v) {}
-};
-
-struct UserLogPassword {
+struct LoginRequest{
   std::string login;
   std::string password;
+};
+
+struct UserInfoResponse{
+  std::string login;
 };
 
 
 class AuthorizationServer {
  public:
-  AuthorizationServer();
+  AuthorizationServer(std::shared_ptr<PGBackend> _pgbackend) : pgbackend(_pgbackend) {}
   ~AuthorizationServer() = default;
 
-  std::string Registration(const UserInfo &user); // добавляет пользователя и возвращает токен
-  std::string Login(const UserLogPassword &user); // по логину и паролю выдает токен
-  UserResponse CheckToken(const std::string &token); // возвращает данные по токену
+  std::string Registration(const RegistrationRequest &user); // добавляет пользователя и возвращает токен пользователю
+  std::string Login(const LoginRequest &user); // по логину и паролю возвращает токен пользователю или пустую строку, если токена нет
+  UserInfoResponse CheckToken(const std::string &token); // возвращает данные по токену???(какие данные?)
 
  private:
-  std::map<std::string, UserInfo> data; // токен и инфа о пользователе
+  std::shared_ptr<PGBackend> pgbackend;
 };
 
 #endif //UNTITLED1_PROJECT_AUTHORIZATION_SERVER_AUTHORIZATIONSERVER_H_

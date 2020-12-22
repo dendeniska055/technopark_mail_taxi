@@ -3,65 +3,28 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <limits>
 
+#include "include/pgbackend.h"
+#include "include/DatabaseManager.h"
+#include "include/pgconnection.h"
 #include "include/AuthorizationServer.h"
-#include "include/SHA1.h"
 
-struct HTTPRequest{
-  std::string request;
-  std::string ip;
-  std::string cookie;
-  std::string login;
-  std::string password;
-};
 
-namespace bpt = boost::property_tree;
+int main(){
+  auto pgbackend = std::make_shared<PGBackend>();
+  AuthorizationServer authServ(pgbackend);
 
-//int main() {
-//  // init db
-//  DatabaseManager data("../database/user.dat");
-//  // !init db
+//  std::string login = "login";
+//  std::string password = "pass";
+//  std::string email = "mail";
 //
-//  const char* httpRequest = "../input/registration_request.JSON";
-//  //parse JSON
-//  bpt::ptree request;
-//  bpt::read_json(httpRequest, request);
 //
-//  HTTPRequest req;
-//
-//  try {
-//    req.request = request.get_child("Request").data();
-//    req.cookie = request.get_child("Cookie").data();
-//    req.ip = request.get_child("IP").data();
-//  } catch (boost::exception &e) {
-//    std::cerr << "BAD REQUEST";
+//  for (int i = 0; i < 100; ++i) {
+//    RegistrationRequest req = {login + std::to_string(i), password + std::to_string(i), email + std::to_string(i) + "@mail.ru"};
+//    authServ.Registration(req);
 //  }
-//
-//  AuthorizationServer auth(data);
-//
-//  if (req.request == "LogIn") {
-//    try {
-//      req.login = request.get_child("login").data();
-//      req.password = request.get_child("pass").data();
-//    } catch (boost::exception &e) {
-//      std::cerr << "BAD AUTHORIZATION REQUEST";
-//    }
-//    Response authAns = auth.Login(UserLogPass{req.login, req.password});
-//    sendResponse(req, authAns);
-//    return 0;
-//  }
-//
-//  if (req.request == "SignUp") {
-//    try {
-//      req.login = request.get_child("login").data();
-//      req.password = request.get_child("pass").data();
-//    } catch (boost::exception &e) {
-//      std::cerr << "BAD AUTHORIZATION REQUEST";
-//    }
-//    Response authAns = auth.Registration(UserLogPass{req.login, req.password});
-//    sendResponse(req, authAns);
-//    return 0;
-//  }
-//
-//  return auth.CheckCookie(req.cookie); // пересылаем дальше
-//}
+
+//  std::cout << authServ.Login({"login5", "pass5"}) << "\n" << "OK";
+//  std::cout << authServ.CheckToken("ba50c99c923f").login << "\n" << "OK";
+}
