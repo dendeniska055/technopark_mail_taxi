@@ -1,6 +1,6 @@
-#include "../include/pgconnection.h"
+#include "../include/DatabaseConnection.h"
 
-PGConnection::PGConnection() {
+DatabaseConnection::DatabaseConnection(){
   m_connection.reset(PQsetdbLogin(m_dbhost.c_str(),
                                   std::to_string(m_dbport).c_str(),
                                   nullptr,
@@ -15,6 +15,6 @@ PGConnection::PGConnection() {
 
 }
 
-std::shared_ptr<PGconn> PGConnection::connection() const {
+std::shared_ptr<PGconn> DatabaseConnection::connection() const {
   return m_connection;
 }

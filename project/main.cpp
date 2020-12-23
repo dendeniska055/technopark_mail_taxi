@@ -5,15 +5,13 @@
 #include <map>
 #include <limits>
 
-#include "include/pgbackend.h"
 #include "include/DatabaseManager.h"
-#include "include/pgconnection.h"
 #include "include/AuthorizationServer.h"
 
 
 int main(){
-  auto pgbackend = std::make_shared<PGBackend>();
-  AuthorizationServer authServ(pgbackend);
+  auto data = std::make_shared<DatabaseManager>();
+  AuthorizationServer authServ(data);
 
 //  std::string login = "login";
 //  std::string password = "pass";
@@ -26,5 +24,12 @@ int main(){
 //  }
 
 //  std::cout << authServ.Login({"login5", "pass5"}) << "\n" << "OK";
-//  std::cout << authServ.CheckToken("ba50c99c923f").login << "\n" << "OK";
+//  authServ.CheckToken("ba50c99c923f");
+
+  std::string login;
+  std::string password;
+  std::string id;
+
+  std::string request1 = "SELECT id, carName, carModel, canAnimalDrive, canChildDrive FROM public.\"Drivers\" WHERE (login) IN ('" + login + "') AND (password) IN ('" + password + "');";
+  std::string request2 = "SELECT carName, carModel FROM public.\"Drivers\" WHERE (id) IN ('" + id + "');";
 }

@@ -1,13 +1,13 @@
-#ifndef UNTITLED2__PGCONNECTION_H_
-#define UNTITLED2__PGCONNECTION_H_
+#ifndef DATABASELIBRARY__DATABASECONNECTION_H_
+#define DATABASELIBRARY__DATABASECONNECTION_H_
 
 #include <memory>
 #include <mutex>
 #include <libpq-fe.h>
 
-class PGConnection {
+class DatabaseConnection {
  public:
-  PGConnection();
+  DatabaseConnection();
   std::shared_ptr<PGconn> connection() const;
 
  private:
@@ -21,4 +21,4 @@ class PGConnection {
 
 };
 
-#endif //UNTITLED2__PGCONNECTION_H_
+#endif //DATABASELIBRARY__DATABASECONNECTION_H_

@@ -18,7 +18,7 @@ endif()
 include_directories(${Boost_INCLUDE_DIRS})
 
 set(auth "project/src/AuthorizationServer.cpp" "project/src/SHA1.cpp")
-set(data "project/src/pgbackend.cpp" "project/src/pgconnection.cpp")
+set(data project/src/DatabaseManager.cpp project/src/DatabaseConnection.cpp)
 
 add_executable(mail_taxi project/main.cpp ${auth} ${data})
 

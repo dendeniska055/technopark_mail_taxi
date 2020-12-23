@@ -8,11 +8,11 @@
 #include <memory>
 #include <random>
 
-#define MAX_TOKEN_LENGHT 12
 
-#include "pgbackend.h"
-#include "pgconnection.h"
+#include "DatabaseManager.h"
 #include "SHA1.h"
+
+#define MAX_TOKEN_LENGHT 12
 
 struct RegistrationRequest{
   std::string login;
@@ -32,15 +32,15 @@ struct UserInfoResponse{
 
 class AuthorizationServer {
  public:
-  AuthorizationServer(std::shared_ptr<PGBackend> _pgbackend) : pgbackend(_pgbackend) {}
+  AuthorizationServer(std::shared_ptr<DatabaseManager> _database) : database(_database) {}
   ~AuthorizationServer() = default;
 
   std::string Registration(const RegistrationRequest &user); // добавляет пользователя и возвращает токен пользователю
   std::string Login(const LoginRequest &user); // по логину и паролю возвращает токен пользователю или пустую строку, если токена нет
-  UserInfoResponse CheckToken(const std::string &token); // возвращает данные по токену???(какие данные?)
+  UserInfoResponse CheckToken(const std::string &token);
 
  private:
-  std::shared_ptr<PGBackend> pgbackend;
+  std::shared_ptr<DatabaseManager> database;
 };
 
 #endif //UNTITLED1_PROJECT_AUTHORIZATION_SERVER_AUTHORIZATIONSERVER_H_

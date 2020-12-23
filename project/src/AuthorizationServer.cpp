@@ -1,8 +1,6 @@
 #include "../include/AuthorizationServer.h"
 
-// добавление в бд пользователя
 std::string AuthorizationServer::Registration(const RegistrationRequest &user) {
-
   std::string passHash = std::string(sha1(user.password));
 
   std::random_device rd;
@@ -14,18 +12,7 @@ std::string AuthorizationServer::Registration(const RegistrationRequest &user) {
   std::string sqlRequest = "INSERT INTO public.\"Users\" (id, login, password, token, email) VALUES (DEFAULT, '"
       + user.login + "', '" + passHash + "', '" + token + "', '" + user.email + "');";
 
-  auto conn = pgbackend->connection();
-
-  PQsendQuery(conn->connection().get(), sqlRequest.c_str());
-
-  while (auto res_ = PQgetResult(conn->connection().get())) {
-    if (PQresultStatus(res_) == PGRES_FATAL_ERROR) {
-      std::cout << PQresultErrorMessage(res_) << std::endl;
-    }
-    PQclear(res_);
-  }
-
-  pgbackend->freeConnection(conn);
+  database->Request(sqlRequest);
 
   return token;
 }
@@ -33,57 +20,23 @@ std::string AuthorizationServer::Registration(const RegistrationRequest &user) {
 UserInfoResponse AuthorizationServer::CheckToken(const std::string &token) {
   UserInfoResponse response;
 
-  auto conn = pgbackend->connection();
+  std::string request = "SELECT id, login FROM public.\"Users\" WHERE (token) IN ('" + token + "');";
 
-  std::string demo = "SELECT login FROM public.\"Users\" WHERE (token) IN ('" + token + "');";
+  std::vector<std::string> a = database->Request(request);
 
-  PQsendQuery(conn->connection().get(), demo.c_str());
-
-  while (auto res_ = PQgetResult(conn->connection().get())) {
-    if (PQresultStatus(res_) == PGRES_TUPLES_OK && PQntuples(res_)) {
-      auto ID = PQgetvalue(res_, 0, 0);
-      std::cout << ID << std::endl;
-      pgbackend->freeConnection(conn);
-      response.login = ID;
-      return response;
-    }
-
-    if (PQresultStatus(res_) == PGRES_FATAL_ERROR) {
-      std::cout << PQresultErrorMessage(res_) << std::endl;
-    }
-
-    PQclear(res_);
+  for (const auto& i : a) {
+    std::cout << i << " ";
   }
-
-  pgbackend->freeConnection(conn);
 
   return response;
 }
 
 std::string AuthorizationServer::Login(const LoginRequest &user) {
-  auto conn = pgbackend->connection();
-
   std::string passHash = std::string(sha1(user.password));
 
-  std::string demo = "SELECT token FROM public.\"Users\" WHERE (login) IN ('" + user.login + "') AND (password) IN ('" + passHash + "');";
-  PQsendQuery(conn->connection().get(), demo.c_str());
+  std::string request = "SELECT token FROM public.\"Users\" WHERE (login) IN ('" + user.login + "') AND (password) IN ('" + passHash + "');";
 
-  while (auto res_ = PQgetResult(conn->connection().get())) {
-    if (PQresultStatus(res_) == PGRES_TUPLES_OK && PQntuples(res_)) {
-      auto ID = PQgetvalue(res_, 0, 0);
-      std::cout << ID << std::endl;
-      pgbackend->freeConnection(conn);
-      return ID;
-    }
+  std::vector<std::string> res = database->Request(request);
 
-    if (PQresultStatus(res_) == PGRES_FATAL_ERROR) {
-      std::cout << PQresultErrorMessage(res_) << std::endl;
-    }
-
-    PQclear(res_);
-  }
-
-  pgbackend->freeConnection(conn);
-
-  return "";
+  return res[0];
 }
