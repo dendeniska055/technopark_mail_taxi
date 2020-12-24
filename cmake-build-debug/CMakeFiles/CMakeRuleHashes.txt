@@ -1,9 +1,0 @@
-# Hashes of file build rules.
-2fc49fe67f9b9c87e64e2fa667a469d0 Authorization.grpc.pb.cc
-20b815ae2c308d765a09e6d554dcbb8d Authorization.pb.h
-a926a31bb00bba011ee1b1c4da66a8dc GeoData.pb.h
-0436707138c6376393a4e57544a6748c GeoIndex.grpc.pb.cc
-9c6071cfa692cb4c396fb8500b7e4e3b GeoIndex.pb.h
-ae5f0a8f7779ff46fa4d55280d78a4da OrderManagement.grpc.pb.cc
-f02257a4620488e8f6bb18f6f36ef034 OrderManagement.pb.h
-26af60d2c5678571846a4cedd3e004f2 TaxiFacilities.pb.h

@@ -1,6 +1,0 @@
-/snap/clion/137/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc-10 -DCMAKE_CXX_COMPILER=/usr/bin/g++-10 -G "CodeBlocks - Unix Makefiles" /home/anton/TaxiProj2
--- Using protobuf 
--- Using gRPC 1.33.2
--- Configuring done
--- Generating done
--- Build files have been written to: /home/anton/TaxiProj2/cmake-build-debug
