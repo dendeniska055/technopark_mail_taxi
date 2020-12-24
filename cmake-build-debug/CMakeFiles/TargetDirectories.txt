@@ -1,0 +1,6 @@
+/home/anton/TaxiProj2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/anton/TaxiProj2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/anton/TaxiProj2/cmake-build-debug/CMakeFiles/Authorization.dir
+/home/anton/TaxiProj2/cmake-build-debug/CMakeFiles/OrderManagement.dir
+/home/anton/TaxiProj2/cmake-build-debug/CMakeFiles/GeoIndexer.dir
+/home/anton/TaxiProj2/cmake-build-debug/CMakeFiles/GeoIndexTestClient.dir

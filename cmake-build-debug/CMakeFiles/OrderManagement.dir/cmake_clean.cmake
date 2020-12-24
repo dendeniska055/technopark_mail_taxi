@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "Authorization.grpc.pb.cc"
+  "Authorization.grpc.pb.h"
+  "Authorization.pb.cc"
+  "Authorization.pb.h"
+  "CMakeFiles/OrderManagement.dir/Authorization.grpc.pb.cc.o"
+  "CMakeFiles/OrderManagement.dir/Authorization.pb.cc.o"
+  "CMakeFiles/OrderManagement.dir/GeoData.pb.cc.o"
+  "CMakeFiles/OrderManagement.dir/GeoIndex.grpc.pb.cc.o"
+  "CMakeFiles/OrderManagement.dir/GeoIndex.pb.cc.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement.grpc.pb.cc.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement.pb.cc.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement/src/ConnectionManagementCash.cpp.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement/src/InitClientCashTable.cpp.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement/src/InitSession.cpp.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement/src/OrderManagementServer.cpp.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement/src/Session.cpp.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement/src/SessionManager.cpp.o"
+  "CMakeFiles/OrderManagement.dir/OrderManagement/src/main.cpp.o"
+  "CMakeFiles/OrderManagement.dir/TaxiFacilities.pb.cc.o"
+  "GeoData.pb.cc"
+  "GeoData.pb.h"
+  "GeoIndex.grpc.pb.cc"
+  "GeoIndex.grpc.pb.h"
+  "GeoIndex.pb.cc"
+  "GeoIndex.pb.h"
+  "OrderManagement"
+  "OrderManagement.grpc.pb.cc"
+  "OrderManagement.grpc.pb.h"
+  "OrderManagement.pb.cc"
+  "OrderManagement.pb.h"
+  "OrderManagement.pdb"
+  "TaxiFacilities.pb.cc"
+  "TaxiFacilities.pb.h"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/OrderManagement.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

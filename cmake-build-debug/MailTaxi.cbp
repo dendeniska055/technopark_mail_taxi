@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="MailTaxi"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\lib\;CMake Files\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\usr\local\lib\cmake\Boost-1.74.0\;CMake Files\..\..\..\usr\local\lib\cmake\boost_headers-1.74.0\;CMake Files\..\..\..\usr\local\lib\cmake\boost_thread-1.74.0\;CMake Files\..\vcpkg\;CMake Files\..\vcpkg\packages\;CMake Files\..\vcpkg\packages\libcds_x64-linux\;CMake Files\..\vcpkg\packages\libcds_x64-linux\share\;CMake Files\..\vcpkg\packages\libcds_x64-linux\share\libcds\;CMake Files\..\.local\;CMake Files\..\.local\lib\;CMake Files\..\.local\lib\cmake\;CMake Files\..\.local\lib\cmake\protobuf\;CMake Files\..\.local\lib\cmake\grpc\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Authorization">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/Authorization" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Authorization"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Authorization/fast">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/Authorization" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Authorization/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OrderManagement">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/OrderManagement" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrderManagement"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OrderManagement/fast">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/OrderManagement" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrderManagement/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GeoIndexer">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/GeoIndexer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 GeoIndexer"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GeoIndexer/fast">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/GeoIndexer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 GeoIndexer/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GeoIndexTestClient">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/GeoIndexTestClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 GeoIndexTestClient"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GeoIndexTestClient/fast">
+				<Option output="/home/anton/TaxiProj2/cmake-build-debug/GeoIndexTestClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anton/TaxiProj2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/home/anton/TaxiProj2/cmake-build-debug"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexer/include"/>
+					<Add directory="/home/anton/TaxiProj2/Authorization/include"/>
+					<Add directory="/home/anton/TaxiProj2/OrderManagement/include"/>
+					<Add directory="/home/anton/TaxiProj2/CashTable/include"/>
+					<Add directory="/home/anton/TaxiProj2/CDSHelper/include"/>
+					<Add directory="/home/anton/TaxiProj2/GeoIndexClient/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/anton/.local/include"/>
+					<Add directory="/home/anton/vcpkg/packages/libcds_x64-linux/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 GeoIndexTestClient/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anton/TaxiProj2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/anton/TaxiProj2/Authorization/src/AuthorizationServerImpl.cpp">
+			<Option target="Authorization"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/Authorization/src/OrderManagerClient.cpp">
+			<Option target="Authorization"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/Authorization/src/Sha1.cpp">
+			<Option target="Authorization"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/Authorization/src/main.cpp">
+			<Option target="Authorization"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/ClientsForTests/ClientForTestGeoIndex/main.cpp">
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/GeoIndexClient/include/GeoIndexClient.h">
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/GeoIndexClient/src/GeoIndexClient.cpp">
+			<Option target="Authorization"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/GeoIndexer/src/DriverGeoIndexer.cpp">
+			<Option target="GeoIndexer"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/GeoIndexer/src/GeoIndexServer.cpp">
+			<Option target="GeoIndexer"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/GeoIndexer/src/Quadrant.cpp">
+			<Option target="GeoIndexer"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/GeoIndexer/src/main.cpp">
+			<Option target="GeoIndexer"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/OrderManagement/src/ConnectionManagementCash.cpp">
+			<Option target="OrderManagement"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/OrderManagement/src/InitClientCashTable.cpp">
+			<Option target="OrderManagement"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/OrderManagement/src/InitSession.cpp">
+			<Option target="OrderManagement"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/OrderManagement/src/OrderManagementServer.cpp">
+			<Option target="OrderManagement"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/OrderManagement/src/Session.cpp">
+			<Option target="OrderManagement"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/OrderManagement/src/SessionManager.cpp">
+			<Option target="OrderManagement"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/OrderManagement/src/main.cpp">
+			<Option target="OrderManagement"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/Authorization.grpc.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/Authorization.grpc.pb.cc.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/Authorization.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/Authorization.pb.h.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/GeoData.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/GeoData.pb.h.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/GeoIndex.grpc.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/GeoIndex.grpc.pb.cc.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/GeoIndex.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/GeoIndex.pb.h.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/OrderManagement.grpc.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/OrderManagement.grpc.pb.cc.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/OrderManagement.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/OrderManagement.pb.h.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/TaxiFacilities.pb.cc">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/cmake-build-debug/TaxiFacilities.pb.h.rule">
+			<Option target="Authorization"/>
+			<Option target="OrderManagement"/>
+			<Option target="GeoIndexer"/>
+			<Option target="GeoIndexTestClient"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/BoostDetectToolset-1.74.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/Boost-1.74.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Boost-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/Boost-1.74.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Boost-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_headers-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/boost_headers-1.74.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_headers-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/boost_thread-1.74.0/boost_thread-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_thread-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/boost_thread-1.74.0/boost_thread-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_thread-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/boost_thread-1.74.0/libboost_thread-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_thread-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../../../usr/local/lib/cmake/boost_thread-1.74.0/libboost_thread-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_thread-1.74.0\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../vcpkg/packages/libcds_x64-linux/share/libcds/LibCDSConfig-debug.cmake">
+			<Option virtualFolder="CMake Files\..\vcpkg\packages\libcds_x64-linux\share\libcds\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../vcpkg/packages/libcds_x64-linux/share/libcds/LibCDSConfig-release.cmake">
+			<Option virtualFolder="CMake Files\..\vcpkg\packages\libcds_x64-linux\share\libcds\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../vcpkg/packages/libcds_x64-linux/share/libcds/LibCDSConfig.cmake">
+			<Option virtualFolder="CMake Files\..\vcpkg\packages\libcds_x64-linux\share\libcds\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/protobuf/protobuf-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/protobuf/protobuf-config.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/protobuf/protobuf-module.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/protobuf/protobuf-options.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/protobuf/protobuf-targets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/protobuf/protobuf-targets.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/grpc/gRPCConfig.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/grpc/gRPCConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/grpc/gRPCTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/anton/TaxiProj2/../.local/lib/cmake/grpc/gRPCTargets.cmake">
+			<Option virtualFolder="CMake Files\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

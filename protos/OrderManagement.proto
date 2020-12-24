@@ -1,0 +1,63 @@
+syntax = "proto3";
+import "TaxiFacilities.proto";
+import "GeoData.proto";
+package MailTaxi;
+
+
+message IdentificationData{
+  string token = 1;
+  uint64 id = 2;
+}
+
+service OrderManager{
+  rpc CreatingDriverWork(CreatingDriverWorkRequest) returns (CreatingDriverWorkResponse){}
+  rpc CloseDriverWork(CloseDriverWorkRequest) returns (CloseDriverWorkResponse){}
+  rpc ProposeOrder(ProposeOrderRequest) returns(ProposeOrderResponse){}
+  rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse){}
+  rpc RemoveOrder(RemoveOrderRequest) returns (RemoveOrderResponse){}
+}
+
+message CreatingDriverWorkRequest{
+  uint64 driverId = 1;
+  string driverToken = 2;
+}
+
+message CreatingDriverWorkResponse{
+  bool success = 1;
+}
+
+message CloseDriverWorkRequest{
+  uint64 driverId = 1;
+}
+
+message CloseDriverWorkResponse{
+  bool success = 1;
+}
+
+message ProposeOrderRequest{
+  uint64 driverId = 1;
+  OrderLocationData orderLocationData = 2;
+}
+
+message ProposeOrderResponse{
+  uint64 driverId = 1;
+  bool success = 2;
+}
+
+message CreateOrderRequest{
+  uint64 orderNum = 1;
+  uint64 driverId = 2;
+  string clientToken = 3;
+}
+
+message CreateOrderResponse{
+  bool success = 1;
+}
+
+message RemoveOrderRequest{
+  uint64 orderNum = 1;
+}
+
+message RemoveOrderResponse{
+  bool success = 1;
+}

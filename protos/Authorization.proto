@@ -1,0 +1,72 @@
+syntax = "proto3";
+import "TaxiFacilities.proto";
+import "GeoData.proto";
+package MailTaxi;
+
+
+service Authorization{
+  rpc Registration(RegistrationRequest) returns (RegistrationResponse){}
+  rpc Authorization(AuthorizationRequest) returns (AuthorizationResponse){}
+  rpc StartDriverWork(StartDriverWorkRequest) returns (StartDriverWorkResponse){}
+  rpc EndDriverWork(EndDriverWorkRequest) returns (EndDriverWorkResponse){}
+  rpc MakeOrder(MakeOrderRequest) returns (stream MakeOrderResponse){}
+}
+enum UserType{
+  driver = 0;
+  client = 1;
+}
+
+message RegistrationRequest{
+  string login = 1;
+  string password = 2;
+  UserType userType = 4;
+}
+
+message RegistrationResponse{
+  string token = 1;
+  uint64 id = 2;
+}
+
+message AuthorizationRequest{
+  string login = 1;
+  string password = 2;
+  UserType userType = 3;
+}
+
+message AuthorizationResponse{
+  string token = 1;
+  uint64 id = 2;
+}
+
+message StartDriverWorkRequest{
+  string token = 1;
+  Coordinate coordinate = 2;
+}
+
+message StartDriverWorkResponse{
+  bool success = 1;
+}
+
+message EndDriverWorkRequest{
+  string token = 1;
+}
+
+message EndDriverWorkResponse{
+  bool success = 1;
+}
+
+message MakeOrderRequest{
+    string token = 1;
+    OrderLocationData locationData = 2;
+    bool animal = 3;
+    bool children = 4;
+    bool driverFound = 5;
+}
+
+message MakeOrderResponse{
+  Coordinate coordinate = 1;
+  double price = 2;
+  string token = 3;
+  string name = 4;
+}
+

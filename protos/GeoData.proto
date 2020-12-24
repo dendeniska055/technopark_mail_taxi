@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package MailTaxi;
+
+message Coordinate{
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message OrderLocationData{
+  Coordinate clientAddress = 1;
+  Coordinate DestinationAddress = 2;
+}
