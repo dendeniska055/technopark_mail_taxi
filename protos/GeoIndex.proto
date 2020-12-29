@@ -1,0 +1,53 @@
+
+syntax = "proto3";
+import "TaxiFacilities.proto";
+import "GeoData.proto";
+package MailTaxi;
+
+
+service GeoIndex{
+  rpc RegisterDriver(RegisterDriverRequest) returns (RegisterDriverResponse){}
+  rpc SelectDrivers(SelectDriversRequest) returns(SelectDriversResponse){}
+  rpc MoveDriver(MoveDriverRequest) returns (MoveDriverResponse){}
+  rpc RemoveDriver(RemoveDriverRequest) returns(RemoveDriverResponse){}
+}
+
+message RegisterDriverRequest{
+  Coordinate coordinate = 1;
+  Driver driver = 2;
+  uint64 driverId = 3;
+}
+
+message RegisterDriverResponse{
+  bool success = 1;
+}
+
+message SelectDriversRequest{
+  Coordinate coordinate = 1;
+  bool animals = 2;
+  bool children = 3;
+  uint64 lvlIter = 4;
+}
+
+message SelectDriversResponse{
+  repeated uint64 driverId = 1;
+  repeated Driver drivers = 2;
+  repeated Coordinate driverCoordinates = 3;
+}
+
+message MoveDriverRequest{
+  uint64 driverId = 1;
+  Coordinate coordinate = 2;
+}
+
+message MoveDriverResponse{
+  bool driverFound = 1;
+}
+
+message RemoveDriverRequest{
+  uint64 driverId = 1;
+}
+
+message RemoveDriverResponse{
+  bool driverFound = 1;
+}

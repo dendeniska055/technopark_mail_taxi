@@ -1,0 +1,100 @@
+syntax = "proto3";
+import "TaxiFacilities.proto";
+import "GeoData.proto";
+package MailTaxi;
+
+
+service Authorization{
+  rpc RegistrationDriver(RegistrationDriverRequest) returns (RegistrationDriverResponse){}
+  rpc RegistrationClient(RegistrationClientRequest) returns (RegistrationClientResponse){}
+  rpc Authorization(AuthorizationRequest) returns (AuthorizationResponse){}
+  rpc StartDriverWork(StartDriverWorkRequest) returns (StartDriverWorkResponse){}
+  rpc EndDriverWork(EndDriverWorkRequest) returns (EndDriverWorkResponse){}
+  rpc MakeOrder(MakeOrderRequest) returns (MakeOrderResponse){}
+  rpc OrderCompleted(OrderCompletedRequest) returns (OrderCompletedResponse){}
+}
+enum UserType{
+  client = 0;
+  driver = 1;
+}
+
+message RegistrationDriverRequest{
+  string name = 1;
+  string login = 2;
+  string password = 3;
+  string carMark = 4;
+  Driver driverInfo = 5;
+}
+
+message RegistrationDriverResponse{
+  string token = 1;
+  uint64 id = 2;
+}
+
+message RegistrationClientRequest{
+  string name = 1;
+  string login = 2;
+  string password = 3;
+}
+
+message RegistrationClientResponse{
+  string token = 1;
+  uint64 id = 2;
+}
+
+message AuthorizationRequest{
+  string login = 1;
+  string password = 2;
+  UserType userType = 3;
+}
+
+message AuthorizationResponse{
+  string token = 1;
+  uint64 id = 2;
+}
+
+message StartDriverWorkRequest{
+  uint64 id = 1;
+  string token = 2;
+  Coordinate coordinate = 3;
+}
+
+message StartDriverWorkResponse{
+  bool success = 1;
+}
+
+message EndDriverWorkRequest{
+  uint64 id = 1;
+  string token = 2;
+}
+
+message EndDriverWorkResponse{
+  bool success = 1;
+}
+
+message MakeOrderRequest{
+    string token = 1;
+    uint64 id = 2;
+    OrderLocationData locationData = 3;
+    bool animal = 4;
+    bool children = 5;
+    OrderType type = 6;
+}
+
+message MakeOrderResponse{
+  Coordinate coordinate = 1;
+  string driverName = 3;
+  string driverCarMark = 4;
+  uint64 orderNum = 5;
+  double price = 6;
+}
+
+message OrderCompletedRequest{
+  uint64 driverId = 1;
+  uint64 orderNum = 2;
+  string token = 3;
+}
+
+message OrderCompletedResponse{
+  bool success = 1;
+}

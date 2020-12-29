@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package MailTaxi;
+
+enum OrderType{
+  economy = 0;
+  business = 1;
+}
+
+message Driver{
+  OrderType   type = 1;
+  bool        children = 2;
+  bool        animals = 3;
+}
+
